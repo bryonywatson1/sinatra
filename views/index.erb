@@ -1,2 +1,12 @@
-<h1>My name is <%=["Amigo", "Oscar", "Viking"].sample%></h1>
+<% if @name.nil? %>
+<form action="/named-cat">
+    Name: <input type="text" name="name"/>
+    <input type="submit" value="Submit"/>
+</form>
+<% end %>
+
+<% if @name %>
+<h1>My name is <%= @name %></h1>
+<% end %>
+
 <img src='http://bit.ly/1eze8aE' style='border:3px dashed red'>

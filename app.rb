@@ -9,18 +9,13 @@ get '/secret' do
   "Nuclear codes: 1234567789"
 end
 
-get '/home' do
-  "Welcome to this site"
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
 end
 
-get '/buy' do
-  "3 magic beans"
-end
-
-get '/a' do
-  "AAAAAAAA"
-end
-
-get '/cat' do
+get '/named-cat' do
+  puts params
+  @name = params[:name]
   erb(:index)
 end
