@@ -20,7 +20,13 @@ get '/secretsecond' do
   "this is a second secret"
 end
 
-get '/cat' do
-  @names = ["Amigo", "Oscar", "Viking", "Chris", "Bryony", "Chairman Miaow"].sample
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking", "Chris", "Bryony", "Chairman Miaow"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
