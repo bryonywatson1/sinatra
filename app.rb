@@ -21,5 +21,6 @@ get '/secretsecond' do
 end
 
 get '/cat' do
+  @names = ["Amigo", "Oscar", "Viking", "Chris", "Bryony", "Chairman Miaow"].sample
   erb(:index)
 end
